@@ -1,0 +1,93 @@
+2я домашка по JS со звездочками:
+
+1. Написать скриптик, который сосчитает и выведет результат от возведения 2 в степень 10, начиная со степени 1
+	for (let i = 1; i < 11; i++) {
+    		console.log(i, 2**i)
+		}
+
+1*. Преобразовать 1 задачу в функцию, принимающую на вход степень, в которую будет возводиться число 2
+	const checkI = function(i) { 
+   	 	console.log(i, 2**i)
+		}
+		checkI(5)
+
+
+2. Написать скрипт, который выведет 5 строк в консоль таким образом, чтобы в первой строчке выводилось :), во второй :):) и так далее
+Пример в консоли:
+:)
+:):)
+:):):)
+:):):):)
+:):):):):)
+
+		let a = ":)"
+
+		for (let i = 1; i < 6; i++) {
+    		console.log(a.repeat(i))
+			}
+
+2*. Преобразовать 2 задачу в функцию, принимающую на вход строку, которая и будет выводиться в консоль (как в условии смайлик), а также количество строк для вывода 
+e.g. function printSmile(stroka, numberOfRows)
+	
+	let a 
+	let b 
+	const printSmile = function(a,b) {
+   		 for (let i = 0; i < b; i++) {
+        		console.log(a.repeat(i))
+         	}
+		}
+
+		printSmile(":) ", 4)
+
+
+3**.  Написать функцию, которая принимает на вход слово. Задача функции посчитать и вывести в консоль, сколько в слове гласных, и сколько согласных букв.
+e.g. function getWordStructure(word)
+В консоли: 
+Слово (word) состоит из  (число) гласных и (число) согласных букв
+
+Проверки: 'case', 'Case', 'Check-list'
+
+	function getWordStructure(word) {
+
+    		word = word.toLowerCase().split("");
+
+    		let A = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"];
+    		let B = ["a", "e", "i", "o", "u"];
+
+    		let countA = 0;
+    		let countB = 0;
+
+    	word.forEach(el => {
+        		if(A.includes(el)) countA ++
+        		else if (B.includes(el)) countB ++
+    		})
+		onsole.log("Слово " + word.join("") + " состоит из " + countA + " гласных и " + countB + " согласных")
+		}   
+		getWordStructure("case")
+		getWordStructure("Case")
+		getWordStructure("Check-list")
+
+                                                           ИЛИ ВОТ ТАК
+
+
+		function getWordStructure(word) {
+    
+   		let A = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"];
+    		let B = ["a", "e", "i", "o", "u"];
+
+    		let countA = 0;
+    		let countB = 0;
+
+		for (let i =0; i < word.length; i++) {
+    			if (A.includes(word[i].toLowerCase())){
+        			countA ++
+   			} else if (B.includes(word[i].toLowerCase())) {
+      				  countB ++
+    			}
+			}    
+			console.log("Слово " + word + " состоит из " + countA + " гласных и " + countB + " согласных")
+			}   
+			getWordStructure("case")
+			getWordStructure("Case")
+			getWordStructure("Check-list")
+
