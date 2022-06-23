@@ -91,3 +91,24 @@ e.g. function getWordStructure(word)
 			getWordStructure("Case")
 			getWordStructure("Check-list")
 
+4**. Написать функцию, которая проверяет, является ли слово палиндромом
+e.g. function isPalindrom(word)
+
+Проверки: 'abba', 'Abba'
+
+	function isPalindrom(word) {
+
+   		let splitWord = word.split("")
+    		let reverseArr = splitWord.reverse()
+    		let reversed_word = reverseArr.join("")
+    		let word_not_reverse = word
+    
+    		if (reversed_word.toLowerCase() === word_not_reverse.toLowerCase()) {
+        		console.log("The word " + word + " is Palindrom")
+        		} else {
+        		console.log("The word " + word + " is not Palindrom")
+        		}
+
+		}
+		isPalindrom("abba")
+		isPalindrom("Abba")
