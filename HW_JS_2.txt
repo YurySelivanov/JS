@@ -61,7 +61,7 @@ e.g. function getWordStructure(word)
         		if(A.includes(el)) countA ++
         		else if (B.includes(el)) countB ++
     		})
-		onsole.log("Слово " + word.join("") + " состоит из " + countA + " гласных и " + countB + " согласных")
+		console.log("Слово " + word.join("") + " состоит из " + countA + " гласных и " + countB + " согласных")
 		}   
 		getWordStructure("case")
 		getWordStructure("Case")
@@ -96,19 +96,14 @@ e.g. function isPalindrom(word)
 
 Проверки: 'abba', 'Abba'
 
-	function isPalindrom(word) {
+		function isPalindrom(word) {
 
-   		let splitWord = word.split("")
-    		let reverseArr = splitWord.reverse()
-    		let reversed_word = reverseArr.join("")
-    		let word_not_reverse = word
-    
-    		if (reversed_word.toLowerCase() === word_not_reverse.toLowerCase()) {
-        		console.log("The word " + word + " is Palindrom")
-        		} else {
-        		console.log("The word " + word + " is not Palindrom")
-        		}
-
-		}
+    			if (word.toLowerCase() === word.toLowerCase().split("").reverse().join("")) {
+        			console.log("The word " + word + " is Palindrom")
+    				} else {
+        			console.log("The word " + word + " is not Palindrom")
+   				}
+     
+    			}
 		isPalindrom("abba")
 		isPalindrom("Abba")
